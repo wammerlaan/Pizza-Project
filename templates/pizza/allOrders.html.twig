@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <h2>Orders ({{ orders|length }})</h2>
+    <ul class="list-group">
+        {% for order in orders %}
+            <li class="list-group-item">{{ order.fname }} {{ order.sname }},, <b>{{ order.address }}, {{ order.city }}, {{ order.zipcode }}</b>,, {{ order.status }}, <b>{{ order.pizza.name }}</b>, {{ order.size.name }} </li>
+        {% endfor %}
+    </ul>
+    </div>
+
+{% endblock %}
